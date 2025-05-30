@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/ExerciciosEbac.iml" filepath="$PROJECT_DIR$/ExerciciosEbac.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/Tarefa_Controle_de_fluxo.iml" filepath="$PROJECT_DIR$/.idea/Tarefa_Controle_de_fluxo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/src.iml" filepath="$PROJECT_DIR$/src/src.iml" />
+>>>>>>> e6c747d (finalizando tarefa módulo 10)
     </modules>
   </component>
 </project>
