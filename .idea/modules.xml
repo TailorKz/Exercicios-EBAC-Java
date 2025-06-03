@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/Colecoes-parte-2/Colecoes-parte-2.iml" filepath="$PROJECT_DIR$/Colecoes-parte-2/Colecoes-parte-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Exercicios-EBAC-Java.iml" filepath="$PROJECT_DIR$/.idea/Exercicios-EBAC-Java.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/Exercicios-Ebac-Java.iml" filepath="$PROJECT_DIR$/.idea/Exercicios-Ebac-Java.iml" />
+>>>>>>> 6f61dfea527ff9ab5f685928f1241455fd5005f7
     </modules>
   </component>
 </project>
