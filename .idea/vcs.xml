@@ -2,9 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/Tarefa_Controle_de_fluxo" vcs="Git" />
-=======
->>>>>>> 6f61dfea527ff9ab5f685928f1241455fd5005f7
   </component>
 </project>
