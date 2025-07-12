@@ -1,6 +1,8 @@
 package test.com.tailorkz;
 
 import com.tailorkz.TesteCliente;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class TesteClienteTest {
 

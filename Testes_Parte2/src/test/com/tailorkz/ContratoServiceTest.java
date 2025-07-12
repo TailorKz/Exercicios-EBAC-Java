@@ -5,6 +5,8 @@ import com.tailorkz.dao.IContratoDao;
 import com.tailorkz.dao.mocks.ContratoDaoMock;
 import com.tailorkz.service.ContratoService;
 import com.tailorkz.service.IcontratoService;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class ContratoServiceTest {
 

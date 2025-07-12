@@ -4,6 +4,8 @@ import com.tailorkz.dao.ClienteDao;
 import com.tailorkz.dao.ClienteDaoMock;
 import com.tailorkz.dao.IClienteDao;
 import com.tailorkz.service.ClienteService;
+import org.junit.Assert;
+import org.junit.Test;
 
 
 public class ClienteServiceTest {
