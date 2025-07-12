@@ -8,4 +8,13 @@ public class ContratoDaoMock implements IContratoDao {
     public void salvar() {
 
     }
+    public void buscar() {
+
+    }
+    public void excluir () {
+
+    }
+    public void atualizar() {
+
+    }
 }

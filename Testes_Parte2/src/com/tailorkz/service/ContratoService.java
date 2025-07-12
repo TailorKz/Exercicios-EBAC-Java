@@ -15,4 +15,16 @@ public class ContratoService implements IcontratoService.IContratoService {
         contratoDao.salvar();
         return "Sucesso";
     }
+    public String buscar() {
+        contratoDao.buscar();
+        return "Sucesso";
+    }
+    public String excluir() {
+        contratoDao.excluir();
+        return "Sucesso";
+    }
+    public String atualizar() {
+        contratoDao.atualizar();
+        return "Sucesso";
+    }
 }

@@ -18,4 +18,19 @@ public class ClienteService {
         clienteDao.salvar();
         return "Sucesso";
     }
+
+    public String buscar() {
+        clienteDao.buscar();
+        return "Sucesso";
+    }
+
+    public String excluir() {
+        clienteDao.excluir();
+        return "Sucesso";
+    }
+
+    public String atualizar() {
+        clienteDao.atualizar();
+        return "Sucesso";
+    }
 }
