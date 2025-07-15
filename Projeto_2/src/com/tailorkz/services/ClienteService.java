@@ -3,22 +3,36 @@ package com.tailorkz.services;
 import com.tailorkz.dao.ClienteDAO;
 import com.tailorkz.dao.IClienteDAO;
 import com.tailorkz.domain.Cliente;
+import com.tailorkz.services.generic.GenericService;
+import com.tailorkz.exceptions.TipoChaveNaoEncontradaException;
 
-public class ClienteService implements IClienteService {
+public class ClienteService extends GenericService<Cliente, Long> implements IClienteService {
 
-    private IClienteDAO clienteDAO;
+    //private IClienteDAO clienteDAO;
 
     public ClienteService(IClienteDAO clienteDAO) {
-        this.clienteDAO = clienteDAO;
+        super(clienteDAO);
+        //this.clienteDAO = clienteDAO;
     }
 
-    @Override
-    public void salvar(Cliente cliente) {
-        clienteDAO.salvar(cliente);
-    }
+//	@Override
+//	public Boolean salvar(Cliente cliente) throws TipoChaveNaoEncontradaException {
+//		return clienteDAO.cadastrar(cliente);
+//	}
 
     @Override
-    public Cliente buscarPorCpf(Long cpf) {
-        return clienteDAO.buscarPorCpf(cpf);
+    public Cliente buscarPorCPF(Long cpf) {
+        return this.dao.consultar(cpf);
     }
+
+//	@Override
+//	public void excluir(Long cpf) {
+//		clienteDAO.excluir(cpf);
+//	}
+//
+//	@Override
+//	public void alterar(Cliente cliente) throws TipoChaveNaoEncontradaException{
+//		clienteDAO.alterar(cliente);
+//	}
+
 }
