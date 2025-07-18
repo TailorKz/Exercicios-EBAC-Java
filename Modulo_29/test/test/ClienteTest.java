@@ -15,7 +15,7 @@ public class ClienteTest {
 
         Cliente cliente = new Cliente();
         cliente.setCodigo("01");
-        cliente.setNome("Rodrigo Pires");
+        cliente.setNome("Tailor Kunz");
 
         Integer qtd = dao.cadastrar(cliente);
         assertTrue(qtd == 1);
