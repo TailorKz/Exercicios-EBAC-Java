@@ -2,7 +2,6 @@ package com.tailorkz.dao;
 
 import com.tailorkz.dao.jdbc.ConnectionFactory;
 
-import com.tailorkz.dao.Produto;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
