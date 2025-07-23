@@ -1,4 +1,4 @@
-package test.br.com.tailorkz;
+package br.com.tailorkz;
 
 import main.br.com.tailorkz.dao.*;
 import main.br.com.tailorkz.dao.generic.jdbc.ConnectionFactory;

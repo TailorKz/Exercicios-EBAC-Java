@@ -1,4 +1,4 @@
-package test.br.com.tailorkz;
+package br.com.tailorkz;
 
 import main.br.com.tailorkz.dao.IProdutoDAO;
 import main.br.com.tailorkz.dao.ProdutoDAO;
@@ -14,8 +14,7 @@ import org.junit.Test;
 import java.math.BigDecimal;
 import java.util.Collection;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 public class ProdutoDAOTest {
 

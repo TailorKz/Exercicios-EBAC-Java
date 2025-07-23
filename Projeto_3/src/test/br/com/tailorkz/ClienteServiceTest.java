@@ -1,4 +1,4 @@
-package test.br.com.tailorkz;
+package br.com.tailorkz;
 
 import main.br.com.tailorkz.dao.IClienteDAO;
 import main.br.com.tailorkz.domain.Cliente;
@@ -17,7 +17,7 @@ public class ClienteServiceTest {
     private Cliente cliente;
 
     public ClienteServiceTest() {
-        IClienteDAO dao = new test.br.com.tailorkz.dao.ClienteDaoMock();
+        IClienteDAO dao = new br.com.tailorkz.dao.ClienteDaoMock();
         clienteService = new ClienteService(dao);
     }
 

@@ -12,7 +12,7 @@ import main.anotacao.Tabela;
 import main.anotacao.TipoChave;
 
 @Tabela("TB_VENDA")
-public class Venda implements Persistente, Persistente {
+public class Venda implements Persistente {
 
     public enum Status {
         INICIADA, CONCLUIDA, CANCELADA;

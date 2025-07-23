@@ -1,4 +1,4 @@
-package test.br.com.tailorkz.dao;
+package br.com.tailorkz.dao;
 
 import main.br.com.tailorkz.dao.IProdutoDAO;
 import main.br.com.tailorkz.domain.Produto;
