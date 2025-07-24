@@ -292,6 +292,7 @@ public class VendaDAOTest {
 		produto.setDescricao("Produto 1");
 		produto.setNome("Produto 1");
 		produto.setValor(valor);
+		produto.setCategoria("Eletrônico");
 		produtoDao.cadastrar(produto);
 		return produto;
 	}

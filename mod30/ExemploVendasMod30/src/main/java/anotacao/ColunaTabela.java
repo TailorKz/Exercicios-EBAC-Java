@@ -21,4 +21,6 @@ public @interface ColunaTabela {
 	String dbName();
 	
 	String setJavaName();
+
+
 }

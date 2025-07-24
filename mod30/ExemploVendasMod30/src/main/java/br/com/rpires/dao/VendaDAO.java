@@ -174,11 +174,11 @@ public class VendaDAO extends GenericDAO<Venda, String> implements IVendaDAO {
 		ResultSet rsProd = null;
 		try {
 			StringBuilder sbProd = new StringBuilder();
-		    sbProd.append("SELECT PQ.ID, PQ.QUANTIDADE, PQ.VALOR_TOTAL, ");
-		    sbProd.append("P.ID AS ID_PRODUTO, P.CODIGO, P.NOME, P.DESCRICAO, P.VALOR ");
-		    sbProd.append("FROM TB_PRODUTO_QUANTIDADE PQ ");
-		    sbProd.append("INNER JOIN TB_PRODUTO P ON P.ID = PQ.ID_PRODUTO_FK ");
-		    sbProd.append("WHERE PQ.ID_VENDA_FK = ?");
+			sbProd.append("SELECT PQ.ID, PQ.QUANTIDADE, PQ.VALOR_TOTAL, ");
+			sbProd.append("P.ID AS ID_PRODUTO, P.CODIGO, P.NOME, P.DESCRICAO, P.VALOR, P.CATEGORIA ");
+			sbProd.append("FROM TB_PRODUTO_QUANTIDADE PQ ");
+			sbProd.append("INNER JOIN TB_PRODUTO P ON P.ID = PQ.ID_PRODUTO_FK ");
+			sbProd.append("WHERE PQ.ID_VENDA_FK = ?");
 		    stmProd = connection.prepareStatement(sbProd.toString());
 		    stmProd.setLong(1, venda.getId());
 		    rsProd = stmProd.executeQuery();
