@@ -16,12 +16,16 @@ public class CarroDao implements ICarroDao {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         entityManager.getTransaction().begin();
+
+        if(carro.getMarca() != null && carro.getMarca().getId() == null) {
+            entityManager.persist(carro.getMarca());
+        }
+
         entityManager.persist(carro);
         entityManager.getTransaction().commit();
 
         entityManager.close();
         entityManagerFactory.close();
-
 
         return carro;
     }

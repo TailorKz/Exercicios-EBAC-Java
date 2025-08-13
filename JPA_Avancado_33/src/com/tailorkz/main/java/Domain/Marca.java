@@ -10,25 +10,21 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import java.util.List;
 
 @Entity
 @Table(name = "TB_MARCA")
 public class Marca {
-
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="marca_seq")
-    @SequenceGenerator(name="marca_seq", sequenceName="sq_marca", initialValue = 1, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "marca_seq")
+    @SequenceGenerator(name = "marca_seq", sequenceName = "sq_marca", initialValue = 1, allocationSize = 1)
     private Long id;
 
-    @Column(name = "DATA_MARCA", nullable = false)
+    @Column(name = "NOME", nullable = false)
     private String nome;
 
-    @OneToMany
-    @JoinColumn(name = "id_carro_fk",
-            foreignKey = @ForeignKey(name = "fk_carro_marca"),
-            referencedColumnName = "id", nullable = false)
-
-    private Carro carro;
+    @OneToMany(mappedBy = "marca")
+    private List<Carro> carros;
 
     public Long getId() {
         return id;
@@ -46,12 +42,12 @@ public class Marca {
         this.nome = nome;
     }
 
-    public Carro getCarro() {
-        return carro;
+    public List<Carro> getCarros() {
+        return carros;
     }
 
-    public void setCarro(Carro carro) {
-        this.carro = carro;
+    public void setCarros(List<Carro> carros) {
+        this.carros = carros;
     }
 
 

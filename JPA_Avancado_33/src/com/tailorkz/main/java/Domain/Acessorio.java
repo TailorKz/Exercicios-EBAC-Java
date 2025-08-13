@@ -14,20 +14,19 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "TB_ACESSORIO")
 public class Acessorio {
-
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="acessorio_seq")
-    @SequenceGenerator(name="acessorio_seq", sequenceName="sq_acessorio", initialValue = 1, allocationSize = 1)
-    public Long id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "acessorio_seq")
+    @SequenceGenerator(name = "acessorio_seq", sequenceName = "sq_acessorio", initialValue = 1, allocationSize = 1)
+    private Long id;
 
     @Column(name = "CODIGO", length = 10, nullable = false, unique = true)
-    public String codigo;
+    private String codigo;
 
-    @Column(name = "NOME", length = 50, nullable = false, unique = true)
-    public String nome;
+    @Column(name = "NOME", length = 50, nullable = false)
+    private String nome;
 
-    @ManyToMany(mappedBy = "acessorio")
-    private List<Carro> carro;
+    @ManyToMany(mappedBy = "acessorios")
+    private List<Carro> carros;
 
     public Long getId() {
         return id;
@@ -53,11 +52,11 @@ public class Acessorio {
         this.nome = nome;
     }
 
-    public List<Carro> getCarro() {
-        return carro;
+    public List<Carro> getCarros() {
+        return carros;
     }
 
-    public void setCarro(List<Carro> carro) {
-        this.carro = carro;
+    public void setCarros(List<Carro> carros) {
+        this.carros = carros;
     }
 }

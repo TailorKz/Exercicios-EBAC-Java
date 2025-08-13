@@ -1,29 +1,34 @@
-import Dao.AcessorioDao;
-import Dao.IAcessorio;
-import Domain.Acessorio;
+import Dao.CarroDao;
+import Dao.ICarroDao;
+import Domain.Carro;
+import Domain.Marca;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class CarroTest {
 
-    private IAcessorio acessorioDao;
+    private ICarroDao carroDao;
 
     @Before
     public void setUp() {
-        acessorioDao = new AcessorioDao();
+        carroDao = new CarroDao();
     }
 
     @Test
-    public void testCadastrarAcessorio() {
-        Acessorio acessorio = new Acessorio();
-        acessorio.setCodigo("AC01");
-        acessorio.setNome("Som Automotivo");
+    public void testCadastrar() {
+        Marca marca = new Marca();
+        marca.setNome("Mitsubishi");
 
-        acessorio = acessorioDao.cadastrar(acessorio);
+        Carro carro = new Carro();
+        carro.setCodigo("M01");
+        carro.setNome("Lancer");
+        carro.setModelo("Sedan");
+        carro.setAno(2012L);
+        carro.setMarca(marca);
 
-        Assert.assertNotNull(acessorio);
-        Assert.assertNotNull(acessorio.getId());
-        System.out.println("ID gerado: " + acessorio.getId());
+        Carro carroSalvo = carroDao.cadastrar(carro);
+        Assert.assertNotNull(carroSalvo.getId());
+        Assert.assertNotNull(carroSalvo.getMarca().getId());
     }
 }
